@@ -2,12 +2,13 @@ package busInterface;
 
 public interface DriverInput_Out {
 	
-	public void setSteeringWheelAngle(int steeringWheelAngle);
-	public void setSteeringWheelMaxAngle(int steeringWheelMaxAngle);
-	public void setBrakePedalAngle(int breakPedalAngle);
-	public void setBrakePedalMaxAngle(int breakPedalMaxAngle);
-	public void setGasPedalAngle(int gasPedalAngle);
-	public void setGasPedalMaxAngle(int gasPedalMaxAngle);
+	public void setEngineToggleButtonState(boolean buttonState);
+	public void setWheelRotationPercent(double steeringWheelAngle);
+	public void setSteeringWheelMaxAngle(double steeringWheelMaxAngle);
+	public void setBrakePedalPushPercent(double breakPedalAngle);
+	public void setBrakePedalMaxAngle(double breakPedalMaxAngle);
+	public void setGasPedalPushPercent(double gasPedalAngle);
+	public void setGasPedalMaxAngle(double gasPedalMaxAngle);
 	public void setCurrentGear(int currentGear);
 	public void setMaxGear(int maxGear);
 	public void setShiftLeverPosition(int shiftLeverPosition);

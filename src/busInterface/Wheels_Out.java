@@ -1,23 +1,23 @@
 package busInterface;
 
 public interface Wheels_Out {
-	void setWheelTorqueInNewton(double newTorque);
-	void setMaximumWheelTorqueInNewton(double newTorque);
+	public void setWheelTorqueInNewton(double newTorque);
+	public void setMaximumWheelTorqueInNewton(double newTorque);
 	
-	void setMaximumBrakeTorqueInNewton(double newTorque);
-	void setFrictionalCoefficientOfBrakes(double coefficient);
+	public void setMaximumBrakeTorqueInNewton(double newTorque);
+	public void setFrictionalCoefficientOfBrakes(double coefficient);
+	 
+	public void setDiameterOfDriveAxesInMeters(double diameter);
+	public void setLengthOfAxesInMeters(double length);
+	public void setDistanceBetweenAxesInMeters(double distance);
 	
-	void setDiameterOfDriveAxesInMeters(double diameter);
-	void setLengthOfAxesInMeters(double length);
-	void setDistanceBetweenAxesInMeters(double distance);
-	
-	void setDiameterOfWheelsInMeters(double diameter);
-	void setWidthOfWheelsInMeters(double width);
-	
-	void setDriveWheelStateZeroBasedDegree(double degree);
-	void setMaximumDriveWheelStateZeroBasedDegree(double degree);
-	void setMaximumWheelsTurnDegree(double degree);
-
-	void setTotalMassInKg(double newMass);
-	void setInnerFrictionalCoefficientInNewton(double coefficient);
+	public void setDiameterOfWheelsInMeters(double diameter);
+	public void setWidthOfWheelsInMeters(double width);
+	 
+	public void setDriveWheelStateZeroBasedDegree(double degree);
+	public void setMaximumDriveWheelStateZeroBasedDegree(double degree);
+	public void setMaximumWheelsTurnDegree(double degree);
+     
+	public void setTotalMassInKg(double newMass);
+	public void setInnerFrictionalCoefficientInNewton(double coefficient);
 }

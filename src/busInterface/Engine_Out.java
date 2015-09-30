@@ -1,10 +1,10 @@
 package busInterface;
 
 public interface Engine_Out {
-	public void setEngineTorque(int engineTorque);
+	public void setEngineTorque(double engineTorque);
 	public void setEngineRevolution(int engineRevolution);
-	public void setWaterTemperature(int waterTemperature);
-	public void setOilTemperature(int oilTemperature);
-	public void setOilPressure(int oilPressure);
+	public void setWaterTemperature(double waterTemperature);
+	public void setOilTemperature(double oilTemperature);
+	public void setOilPressure(double oilPressure);
 	public void setServiceCode(int serviceCode);
 }

@@ -12,10 +12,17 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return instance;
 	}
 
+	public boolean getEngineToggleButtonState() {
+		return EngineToggleButtonState;
+	}
+
+	public void setEngineToggleButtonState(boolean buttonState) {
+		EngineToggleButtonState = buttonState;		
+	}
 	public double getSteeringWheelAngle() {
 		return SteeringWheelAngle;
 	}
-	public void setSteeringWheelAngle(int steeringWheelAngle) {
+	public void setWheelRotationPercent(double steeringWheelAngle) {
 		SteeringWheelAngle = steeringWheelAngle;
 	}
 	
@@ -23,14 +30,14 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return SteeringWheelMaxAngle;
 	}
 
-	public void setSteeringWheelMaxAngle(int steeringWheelMaxAngle) {
+	public void setSteeringWheelMaxAngle(double steeringWheelMaxAngle) {
 		SteeringWheelMaxAngle = steeringWheelMaxAngle;
 	}
 	public double getBrakePedalAngle() {
 		return BreakPedalAngle;
 	}
 
-	public void setBrakePedalAngle(int breakPedalAngle) {
+	public void setBrakePedalPushPercent(double breakPedalAngle) {
 		BreakPedalAngle = breakPedalAngle;
 	}
 
@@ -38,7 +45,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return BreakPedalMaxAngle;
 	}
 
-	public void setBrakePedalMaxAngle(int breakPedalMaxAngle) {
+	public void setBrakePedalMaxAngle(double breakPedalMaxAngle) {
 		BreakPedalMaxAngle = breakPedalMaxAngle;
 	}
 
@@ -46,7 +53,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return GasPedalAngle;
 	}
 
-	public void setGasPedalAngle(int gasPedalAngle) {
+	public void setGasPedalPushPercent(double gasPedalAngle) {
 		GasPedalAngle = gasPedalAngle;
 	}
 
@@ -54,7 +61,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return GasPedalMaxAngle;
 	}
 
-	public void setGasPedalMaxAngle(int gasPedalMaxAngle) {
+	public void setGasPedalMaxAngle(double gasPedalMaxAngle) {
 		GasPedalMaxAngle = gasPedalMaxAngle;
 	}
 
@@ -86,7 +93,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return GearTorque;
 	}
 
-	public void setGearTorque(int gearTorque) {
+	public void setGearTorque(double gearTorque) {
 		GearTorque = gearTorque;
 	}
 
@@ -110,7 +117,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return EngineTorque;
 	}
 
-	public void setEngineTorque(int engineTorque) {
+	public void setEngineTorque(double engineTorque) {
 		EngineTorque = engineTorque;
 	}
 
@@ -126,7 +133,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return WaterTemperature;
 	}
 
-	public void setWaterTemperature(int waterTemperature) {
+	public void setWaterTemperature(double waterTemperature) {
 		WaterTemperature = waterTemperature;
 	}
 
@@ -134,7 +141,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return OilTemperature;
 	}
 
-	public void setOilTemperature(int oilTemperature) {
+	public void setOilTemperature(double oilTemperature) {
 		OilTemperature = oilTemperature;
 	}
 
@@ -142,7 +149,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return OilPressure;
 	}
 
-	public void setOilPressure(int oilPressure) {
+	public void setOilPressure(double oilPressure) {
 		OilPressure = oilPressure;
 	}
 
@@ -308,6 +315,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	private int CurrentGear;
 	private int MaxGear;
 	private int ShiftLeverPosition;
+	private boolean EngineToggleButtonState;
 	
 	/*Gearbox*/
 	private double GearTorque;
@@ -344,10 +352,14 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	private double TotalMassInKg;                        
 	private double InnerFrictionalCoefficientInNewton;   
 	
+	
+	
 	private static Container instance = null;
+	
 	
 	private Container(){
 		//do not instantiate; do not subclass;
 	}
+
 
 }

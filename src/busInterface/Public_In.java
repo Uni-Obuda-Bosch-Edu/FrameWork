@@ -8,6 +8,8 @@ public interface Public_In {
 	public double getBrakePedalMaxAngle();
 	public double getGasPedalAngle();
 	public double getGasPedalMaxAngle();
+	public boolean getEngineToggleButtonState();
+	
 	public int getCurrentGear();
 	public int getMaxGear();
 	public int getShiftLeverPosition();
