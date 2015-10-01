@@ -2,12 +2,9 @@ package busInterface;
 
 public interface Public_In {
 	
-	public double getSteeringWheelAngle();
-	public double getSteeringWheelMaxAngle();
-	public double getBrakePedalAngle();
-	public double getBrakePedalMaxAngle();
-	public double getGasPedalAngle();
-	public double getGasPedalMaxAngle();
+	public double getSteeringWheelSignedPercentage();
+	public double getBrakePedalPercentage();
+	public double getGasPedalPercentage();
 	public boolean getEngineToggleButtonState();
 	
 	public int getCurrentGear();

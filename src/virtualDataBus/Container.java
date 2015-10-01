@@ -19,7 +19,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	public void setEngineToggleButtonState(boolean buttonState) {
 		EngineToggleButtonState = buttonState;		
 	}
-	public double getSteeringWheelAngle() {
+	public double getSteeringWheelSignedPercentage() {
 		return SteeringWheelAngle;
 	}
 	public void setWheelRotationPercent(double steeringWheelAngle) {
@@ -33,36 +33,20 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	public void setSteeringWheelMaxAngle(double steeringWheelMaxAngle) {
 		SteeringWheelMaxAngle = steeringWheelMaxAngle;
 	}
-	public double getBrakePedalAngle() {
-		return BreakPedalAngle;
+	public double getBrakePedalPercentage() {
+		return BreakPedalPercent;
 	}
 
 	public void setBrakePedalPushPercent(double breakPedalAngle) {
-		BreakPedalAngle = breakPedalAngle;
+		BreakPedalPercent = breakPedalAngle;
 	}
 
-	public double getBrakePedalMaxAngle() {
-		return BreakPedalMaxAngle;
-	}
-
-	public void setBrakePedalMaxAngle(double breakPedalMaxAngle) {
-		BreakPedalMaxAngle = breakPedalMaxAngle;
-	}
-
-	public double getGasPedalAngle() {
-		return GasPedalAngle;
+	public double getGasPedalPercentage() {
+		return GasPedalPercent;
 	}
 
 	public void setGasPedalPushPercent(double gasPedalAngle) {
-		GasPedalAngle = gasPedalAngle;
-	}
-
-	public double getGasPedalMaxAngle() {
-		return GasPedalMaxAngle;
-	}
-
-	public void setGasPedalMaxAngle(double gasPedalMaxAngle) {
-		GasPedalMaxAngle = gasPedalMaxAngle;
+		GasPedalPercent = gasPedalAngle;
 	}
 
 	public int getCurrentGear() {
@@ -308,10 +292,8 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	/*DriverInput*/
 	private double SteeringWheelAngle;
 	private double SteeringWheelMaxAngle;
-	private double BreakPedalAngle;
-	private double BreakPedalMaxAngle;
-	private double GasPedalAngle;
-	private double GasPedalMaxAngle;
+	private double BreakPedalPercent;
+	private double GasPedalPercent;
 	private int CurrentGear;
 	private int MaxGear;
 	private int ShiftLeverPosition;
