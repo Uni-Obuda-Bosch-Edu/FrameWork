@@ -1,0 +1,132 @@
+<!DOCTYPE test>
+<Scene width="5000" height="6500" measureType="0" color="#ffffff">
+ <Objects>
+  <Object type="svg" id="0" name="data/road_signs/direction/209-30_.svg">
+   <Position x="200" y="200"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="0"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="1" name="data/road_signs/direction/211-10_.svg">
+   <Position x="280" y="200"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="1"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="2" name="data/road_signs/direction/211-20_.svg">
+   <Position x="360" y="200"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="2"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="3" name="data/road_signs/direction/214-10_.svg">
+   <Position x="440" y="200"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="3"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="4" name="data/road_signs/direction/214-20_.svg">
+   <Position x="520" y="200"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="4"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="5" name="data/road_signs/direction/215_.svg">
+   <Position x="600" y="200"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="5"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="6" name="data/road_signs/parking/314_10_.svg">
+   <Position x="200" y="300"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="6"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="7" name="data/road_signs/parking/314_20_.svg">
+   <Position x="280" y="300"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="7"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="8" name="data/road_signs/priority/205_.svg">
+   <Position x="200" y="400"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="8"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="9" name="data/road_signs/priority/206_.svg">
+   <Position x="280" y="400"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="9"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="10" name="data/road_signs/priority/306_.svg">
+   <Position x="360" y="400"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="10"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="11" name="data/road_signs/speed/274_51_.svg">
+   <Position x="200" y="500"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="11"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="12" name="data/road_signs/speed/274_52_.svg">
+   <Position x="280" y="500"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="12"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="13" name="data/road_signs/speed/274_54_.svg">
+   <Position x="360" y="500"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="13"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="14" name="data/road_signs/speed/274_55_.svg">
+   <Position x="440" y="500"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="14"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="15" name="data/road_signs/speed/274_57_.svg">
+   <Position x="520" y="500"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="15"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="16" name="data/road_signs/speed/274_59_.svg">
+   <Position x="600" y="500"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="16"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="svg" id="17" name="data/road_signs/speed/274_60_.svg">
+   <Position x="680" y="500"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="17"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+ </Objects>
+ <Connections/>
+</Scene>

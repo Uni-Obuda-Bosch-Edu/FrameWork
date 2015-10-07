@@ -1,0 +1,286 @@
+<!DOCTYPE test>
+<Scene width="5000" height="6500" measureType="0" color="#ffffff">
+ <Objects>
+  <Object type="road" id="0" name="data/road_tiles/2_lane_simple/2_simple_45r.tile">
+   <Position x="1800" y="2000"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="0"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups>
+    <ParameterGroup name="RoadColor_1">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_2">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_3">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_1">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_1_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_1_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_2">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="false" index="6" name="rp_sep_2_bnd" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_2_d" text=""/>
+     <Parameter type="bool" value="false" index="7" name="rp_sep_2_dbnd" text=""/>
+     <Parameter type="bool" value="false" index="4" name="rp_sep_2_ds" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_2_s" text=""/>
+     <Parameter type="bool" value="false" index="5" name="rp_sep_2_sd" text=""/>
+     <Parameter type="bool" value="false" index="3" name="rp_sep_2_ss" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_3">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_3_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_3_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="Tarmac">
+     <Parameter type="bool" value="false" index="0" name="rp_tar" text=""/>
+    </ParameterGroup>
+   </ParameterGroups>
+  </Object>
+  <Object type="road" id="1" name="data/road_tiles/2_lane_simple/2_simple_65r.tile">
+   <Position x="1200" y="2000"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="1"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups>
+    <ParameterGroup name="RoadColor_1">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_2">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_3">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_1">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_1_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_1_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_2">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="false" index="6" name="rp_sep_2_bnd" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_2_d" text=""/>
+     <Parameter type="bool" value="false" index="7" name="rp_sep_2_dbnd" text=""/>
+     <Parameter type="bool" value="false" index="4" name="rp_sep_2_ds" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_2_s" text=""/>
+     <Parameter type="bool" value="false" index="5" name="rp_sep_2_sd" text=""/>
+     <Parameter type="bool" value="false" index="3" name="rp_sep_2_ss" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_3">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_3_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_3_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="Tarmac">
+     <Parameter type="bool" value="false" index="0" name="rp_tar" text=""/>
+    </ParameterGroup>
+   </ParameterGroups>
+  </Object>
+  <Object type="road" id="2" name="data/road_tiles/2_lane_simple/2_simple_90r.tile">
+   <Position x="500" y="2000"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="2"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups>
+    <ParameterGroup name="RoadColor_1">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_2">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_3">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_1">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_1_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_1_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_2">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="false" index="6" name="rp_sep_2_bnd" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_2_d" text=""/>
+     <Parameter type="bool" value="false" index="7" name="rp_sep_2_dbnd" text=""/>
+     <Parameter type="bool" value="false" index="4" name="rp_sep_2_ds" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_2_s" text=""/>
+     <Parameter type="bool" value="false" index="5" name="rp_sep_2_sd" text=""/>
+     <Parameter type="bool" value="false" index="3" name="rp_sep_2_ss" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_3">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_3_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_3_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="Tarmac">
+     <Parameter type="bool" value="false" index="0" name="rp_tar" text=""/>
+    </ParameterGroup>
+   </ParameterGroups>
+  </Object>
+  <Object type="road" id="3" name="data/road_tiles/2_lane_simple/2_simple_65l.tile">
+   <Position x="1200" y="1300"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="3"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups>
+    <ParameterGroup name="RoadColor_1">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_2">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_3">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_1">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_1_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_1_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_2">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="false" index="6" name="rp_sep_2_bnd" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_2_d" text=""/>
+     <Parameter type="bool" value="false" index="7" name="rp_sep_2_dbnd" text=""/>
+     <Parameter type="bool" value="false" index="4" name="rp_sep_2_ds" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_2_s" text=""/>
+     <Parameter type="bool" value="false" index="5" name="rp_sep_2_sd" text=""/>
+     <Parameter type="bool" value="false" index="3" name="rp_sep_2_ss" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_3">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_3_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_3_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="Tarmac">
+     <Parameter type="bool" value="false" index="0" name="rp_tar" text=""/>
+    </ParameterGroup>
+   </ParameterGroups>
+  </Object>
+  <Object type="road" id="4" name="data/road_tiles/2_lane_simple/2_simple_45l.tile">
+   <Position x="1800" y="1300"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="4"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups>
+    <ParameterGroup name="RoadColor_1">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_2">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_3">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_1">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_1_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_1_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_2">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="false" index="6" name="rp_sep_2_bnd" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_2_d" text=""/>
+     <Parameter type="bool" value="false" index="7" name="rp_sep_2_dbnd" text=""/>
+     <Parameter type="bool" value="false" index="4" name="rp_sep_2_ds" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_2_s" text=""/>
+     <Parameter type="bool" value="false" index="5" name="rp_sep_2_sd" text=""/>
+     <Parameter type="bool" value="false" index="3" name="rp_sep_2_ss" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_3">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_3_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_3_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="Tarmac">
+     <Parameter type="bool" value="false" index="0" name="rp_tar" text=""/>
+    </ParameterGroup>
+   </ParameterGroups>
+  </Object>
+  <Object type="road" id="5" name="data/road_tiles/2_lane_simple/2_simple_90l.tile">
+   <Position x="500" y="1300"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="5"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups>
+    <ParameterGroup name="RoadColor_1">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_2">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_3">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_1">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_1_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_1_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_2">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="false" index="6" name="rp_sep_2_bnd" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_2_d" text=""/>
+     <Parameter type="bool" value="false" index="7" name="rp_sep_2_dbnd" text=""/>
+     <Parameter type="bool" value="false" index="4" name="rp_sep_2_ds" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_2_s" text=""/>
+     <Parameter type="bool" value="false" index="5" name="rp_sep_2_sd" text=""/>
+     <Parameter type="bool" value="false" index="3" name="rp_sep_2_ss" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_3">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_3_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_3_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="Tarmac">
+     <Parameter type="bool" value="false" index="0" name="rp_tar" text=""/>
+    </ParameterGroup>
+   </ParameterGroups>
+  </Object>
+  <Object type="road" id="6" name="data/road_tiles/2_lane_simple/2_simple_s.tile">
+   <Position x="500" y="300"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="6"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups>
+    <ParameterGroup name="RoadColor_1">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_2">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadColor_3">
+     <Parameter g="255" type="color" index="0" r="255" a="255" name="Color" b="255" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_1">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_1_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_1_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_2">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="false" index="6" name="rp_sep_2_bnd" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_2_d" text=""/>
+     <Parameter type="bool" value="false" index="7" name="rp_sep_2_dbnd" text=""/>
+     <Parameter type="bool" value="false" index="4" name="rp_sep_2_ds" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_2_s" text=""/>
+     <Parameter type="bool" value="false" index="5" name="rp_sep_2_sd" text=""/>
+     <Parameter type="bool" value="false" index="3" name="rp_sep_2_ss" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="RoadPainting_3">
+     <Parameter type="bool" value="false" index="0" name="rp_none" text=""/>
+     <Parameter type="bool" value="true" index="1" name="rp_sep_3_s" text=""/>
+     <Parameter type="bool" value="false" index="2" name="rp_sep_3_sb" text=""/>
+    </ParameterGroup>
+    <ParameterGroup name="Tarmac">
+     <Parameter type="bool" value="false" index="0" name="rp_tar" text=""/>
+    </ParameterGroup>
+   </ParameterGroups>
+  </Object>
+ </Objects>
+ <Connections/>
+</Scene>

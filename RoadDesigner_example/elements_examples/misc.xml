@@ -1,0 +1,27 @@
+<!DOCTYPE test>
+<Scene width="5000" height="6500" measureType="0" color="#ffffff">
+ <Objects>
+  <Object type="image" id="0" name="data/misc/people/man03.pix">
+   <Position x="300" y="300"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="0"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="image" id="1" name="data/misc/trees/tree_top_view.pix">
+   <Position x="300" y="500"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="1"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+  <Object type="image" id="2" name="data/misc/parking/parking_bollard.pix">
+   <Position x="600" y="300"/>
+   <Transform m21="0" m11="1" m22="1" m12="0"/>
+   <ZLevel ZLevel="2"/>
+   <Opacity Opacity="1"/>
+   <ParameterGroups/>
+  </Object>
+ </Objects>
+ <Connections/>
+</Scene>
