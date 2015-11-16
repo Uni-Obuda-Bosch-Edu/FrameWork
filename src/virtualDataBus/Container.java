@@ -1,9 +1,12 @@
 package virtualDataBus;
 
+import PP.*;
 import busInterface.*;
+import engine.*;
 
-public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Wheels_Out, Public_In{
-	
+public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Wheels_Out, Public_In, IPP_Out
+{
+
 	public enum ShiftLeverPosition {Parking, Reverse, Neutral, Break}
 	
 	public static Container getInstance(){
@@ -17,11 +20,17 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	}
 
 	public void setEngineToggleButtonState(boolean buttonState) {
-		EngineToggleButtonState = buttonState;		
+		EngineToggleButtonState = buttonState;
+		if(buttonState)
+			_engine.Connect();
+		else
+			_engine.Disconnect();
 	}
+
 	public double getSteeringWheelSignedPercentage() {
 		return SteeringWheelAngle;
 	}
+
 	public void setWheelRotationPercent(double steeringWheelAngle) {
 		SteeringWheelAngle = steeringWheelAngle;
 	}
@@ -93,56 +102,18 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return GearMode;
 	}
 
+	@Override
+	public int getEngineRevolution() {
+		return _engineRevolution;
+	}
+
+	@Override
+	public void setEngineRevolution(int engineRevolution) {
+		_engineRevolution = engineRevolution;
+	}
+
 	public void setGearMode(int gearMode) {
 		GearMode = gearMode;
-	}
-
-	public double getEngineTorque() {
-		return EngineTorque;
-	}
-
-	public void setEngineTorque(double engineTorque) {
-		EngineTorque = engineTorque;
-	}
-
-	public int getEngineRevolution() {
-		return EngineRevolution;
-	}
-
-	public void setEngineRevolution(int engineRevolution) {
-		EngineRevolution = engineRevolution;
-	}
-
-	public double getWaterTemperature() {
-		return WaterTemperature;
-	}
-
-	public void setWaterTemperature(double waterTemperature) {
-		WaterTemperature = waterTemperature;
-	}
-
-	public double getOilTemperature() {
-		return OilTemperature;
-	}
-
-	public void setOilTemperature(double oilTemperature) {
-		OilTemperature = oilTemperature;
-	}
-
-	public double getOilPressure() {
-		return OilPressure;
-	}
-
-	public void setOilPressure(double oilPressure) {
-		OilPressure = oilPressure;
-	}
-
-	public int getServiceCode() {
-		return ServiceCode;
-	}
-
-	public void setServiceCode(int serviceCode) {
-		ServiceCode = serviceCode;
 	}
 
 	public double getCenterOfXAxis() {
@@ -175,6 +146,16 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 
 	public void setMotionVectorYWithLengthAsSpeedInKm(double motionVectorYWithLengthAsSpeedInKm) {
 		MotionVectorYWithLengthAsSpeedInKm = motionVectorYWithLengthAsSpeedInKm;
+	}
+
+	@Override
+	public void setParkingFoundOnLeft(boolean val) {
+		_parkingFoundOnLeft = val;
+	}
+
+	@Override
+	public void setParkingFoundOnRight(boolean val) {
+		_parkingFoundOnRight = val;
 	}
 	
 	public void setWheelTorqueInNewton(double newTorque) {
@@ -287,8 +268,24 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	public double getInnerFrictionalCoefficientInNewton() {
 		return InnerFrictionalCoefficientInNewton;
 	}
-	
-	
+
+	@Override
+	public int getIndexState() {
+		return _indexState;
+	}
+
+    @Override
+    public boolean getPPActivated() {
+        return _ppActivated;
+    }
+
+    /*PP*/
+	private Integration _integration;
+	private boolean _parkingFoundOnLeft;
+	private boolean _parkingFoundOnRight;
+	private int _indexState;
+	private boolean _ppActivated;
+
 	/*DriverInput*/
 	private double SteeringWheelAngle;
 	private double SteeringWheelMaxAngle;
@@ -305,13 +302,9 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	private int GearMode;
 	
 	/*Engine*/
-	private double EngineTorque;
-	private int EngineRevolution;
-	private double WaterTemperature;
-	private double OilTemperature;
-	private double OilPressure;
-	private int ServiceCode;
-	
+	private Engine _engine;
+	private int _engineRevolution;
+
 	/*Wheels*/
 	private double CenterOfXAxis;
 	private double CenterOfYAxis;
@@ -341,7 +334,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	
 	private Container(){
 		//do not instantiate; do not subclass;
+		_engine = new Engine(this,new EngineBlock(this,this),EngineBlock.BUS_SAMPLING_TIME_MS);
+        _integration = new Integration(this,Integration.BUS_SAMPLING_TIME_MS,new PP());
 	}
-
-
 }

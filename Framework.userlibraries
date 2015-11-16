@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="junit-4.7">
+    <archive path="C:/Work/redcoreit/FrameWork/Refs/junit-4.7.jar" />
+  </library>
+</eclipse-userlibraries>
+
