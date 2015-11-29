@@ -9,8 +9,8 @@ public class DriverInput {
 	private final static ShiftLeverPosition DefaultShiftLeverPosition = ShiftLeverPosition.Parking;
 	private final static double DefaultSteeringWheelRotationPercent = 0.0;
 	private final static double DefaultPedalPushPercent = 0.0;
-	public final static int MaxSteeringWheelRotationPerDirection = 100;
-	public final static int MaxPedalPushValue = 100;
+	public final static double MaxSteeringWheelRotationPerDirection = 100.0;
+	public final static double MaxPedalPushValue = 100.0;
 	
 	private Public_In in;
 	private DriverInput_Out out;

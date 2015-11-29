@@ -39,8 +39,6 @@ public interface Public_In {
 	public double getTotalMassInKg();
 	public double getInnerFrictionalCoefficientInNewton();
 
-	//TODO: implement in Driver input
-	public int getIndexState();
 	public boolean getPPActivated();
 };
    

@@ -38,13 +38,6 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		SteeringWheelAngle = steeringWheelAngle;
 	}
 	
-	public double getSteeringWheelMaxAngle() {
-		return SteeringWheelMaxAngle;
-	}
-
-	public void setSteeringWheelMaxAngle(double steeringWheelMaxAngle) {
-		SteeringWheelMaxAngle = steeringWheelMaxAngle;
-	}
 	public double getBrakePedalPercentage() {
 		return BreakPedalPercent;
 	}
@@ -60,22 +53,6 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	public void setGasPedalPushPercent(double gasPedalAngle) {
 		GasPedalPercent = gasPedalAngle;
 	}
-
-	//public int getCurrentGear() {
-	//	return CurrentGear;
-	//}
-
-	//public void setCurrentGear(int currentGear) {
-	//	CurrentGear = currentGear;
-	//}
-
-	//public int getMaxGear() {
-	//	return MaxGear;
-	//}
-
-	//public void setMaxGear(int maxGear) {
-	//	MaxGear = maxGear;
-	//}
 
 	public ShiftLeverPosition getShiftLeverPosition() {
 		return ShiftLeverPosition;
@@ -295,11 +272,8 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	private InputVisualizer _inputVisualizer;
 	
 	private double SteeringWheelAngle;
-	private double SteeringWheelMaxAngle;
 	private double BreakPedalPercent;
 	private double GasPedalPercent;
-	//private int CurrentGear;
-	//private int MaxGear;
 	private ShiftLeverPosition ShiftLeverPosition;
 	private boolean EngineToggleButtonState;
 	
