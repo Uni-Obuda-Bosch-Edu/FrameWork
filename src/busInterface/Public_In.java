@@ -1,5 +1,7 @@
 package busInterface;
 
+import virtualDataBus.Container.ShiftLeverPosition;
+
 public interface Public_In {
 	
 	public double getSteeringWheelSignedPercentage();
@@ -7,20 +9,15 @@ public interface Public_In {
 	public double getGasPedalPercentage();
 	public boolean getEngineToggleButtonState();
 	
-	public int getCurrentGear();
-	public int getMaxGear();
-	public int getShiftLeverPosition();
+	//public int getCurrentGear();
+	//public int getMaxGear();
+	public ShiftLeverPosition getShiftLeverPosition();
 	
 	public double getGearTorque();    
 	public int getGearRevolution();  
 	public int getGearMode();   
 	
-	public double getEngineTorque();
 	public int getEngineRevolution();
-	public double getWaterTemperature();
-	public double getOilTemperature();
-	public double getOilPressure(); 
-	public int getServiceCode(); 
 	
 	public double getCenterOfXAxis();
 	public double getCenterOfYAxis();
@@ -41,6 +38,10 @@ public interface Public_In {
 	public double getMaximumWheelsTurnDegree();
 	public double getTotalMassInKg();
 	public double getInnerFrictionalCoefficientInNewton();
+
+	//TODO: implement in Driver input
+	public int getIndexState();
+	public boolean getPPActivated();
 };
    
                    

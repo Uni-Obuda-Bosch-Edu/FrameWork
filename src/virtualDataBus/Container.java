@@ -1,10 +1,16 @@
 package virtualDataBus;
 
+import PP.*;
 import busInterface.*;
+import driverinput.DriverInput;
+import engine.*;
+import inputHandler.DriverInputHandler;
+import inputHandler.InputVisualizer;
 
-public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Wheels_Out, Public_In{
-	
-	public enum ShiftLeverPosition {Parking, Reverse, Neutral, Break}
+public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Wheels_Out, Public_In, IPP_Out
+{
+
+	public enum ShiftLeverPosition {Parking, Reverse, Neutral, Drive}
 	
 	public static Container getInstance(){
 		if(instance == null)
@@ -17,11 +23,17 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	}
 
 	public void setEngineToggleButtonState(boolean buttonState) {
-		EngineToggleButtonState = buttonState;		
+		if(buttonState)
+			_engine.Connect();
+		else
+			_engine.Disconnect();
+		EngineToggleButtonState = buttonState;
 	}
+
 	public double getSteeringWheelSignedPercentage() {
 		return SteeringWheelAngle;
 	}
+
 	public void setWheelRotationPercent(double steeringWheelAngle) {
 		SteeringWheelAngle = steeringWheelAngle;
 	}
@@ -49,27 +61,27 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		GasPedalPercent = gasPedalAngle;
 	}
 
-	public int getCurrentGear() {
-		return CurrentGear;
-	}
+	//public int getCurrentGear() {
+	//	return CurrentGear;
+	//}
 
-	public void setCurrentGear(int currentGear) {
-		CurrentGear = currentGear;
-	}
+	//public void setCurrentGear(int currentGear) {
+	//	CurrentGear = currentGear;
+	//}
 
-	public int getMaxGear() {
-		return MaxGear;
-	}
+	//public int getMaxGear() {
+	//	return MaxGear;
+	//}
 
-	public void setMaxGear(int maxGear) {
-		MaxGear = maxGear;
-	}
+	//public void setMaxGear(int maxGear) {
+	//	MaxGear = maxGear;
+	//}
 
-	public int getShiftLeverPosition() {
+	public ShiftLeverPosition getShiftLeverPosition() {
 		return ShiftLeverPosition;
 	}
 
-	public void setShiftLeverPosition(int shiftLeverPosition) {
+	public void setShiftLeverPosition(ShiftLeverPosition shiftLeverPosition) {
 		ShiftLeverPosition = shiftLeverPosition;
 	}
 
@@ -93,56 +105,18 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return GearMode;
 	}
 
+	@Override
+	public int getEngineRevolution() {
+		return _engineRevolution;
+	}
+
+	@Override
+	public void setEngineRevolution(int engineRevolution) {
+		_engineRevolution = engineRevolution;
+	}
+
 	public void setGearMode(int gearMode) {
 		GearMode = gearMode;
-	}
-
-	public double getEngineTorque() {
-		return EngineTorque;
-	}
-
-	public void setEngineTorque(double engineTorque) {
-		EngineTorque = engineTorque;
-	}
-
-	public int getEngineRevolution() {
-		return EngineRevolution;
-	}
-
-	public void setEngineRevolution(int engineRevolution) {
-		EngineRevolution = engineRevolution;
-	}
-
-	public double getWaterTemperature() {
-		return WaterTemperature;
-	}
-
-	public void setWaterTemperature(double waterTemperature) {
-		WaterTemperature = waterTemperature;
-	}
-
-	public double getOilTemperature() {
-		return OilTemperature;
-	}
-
-	public void setOilTemperature(double oilTemperature) {
-		OilTemperature = oilTemperature;
-	}
-
-	public double getOilPressure() {
-		return OilPressure;
-	}
-
-	public void setOilPressure(double oilPressure) {
-		OilPressure = oilPressure;
-	}
-
-	public int getServiceCode() {
-		return ServiceCode;
-	}
-
-	public void setServiceCode(int serviceCode) {
-		ServiceCode = serviceCode;
 	}
 
 	public double getCenterOfXAxis() {
@@ -175,6 +149,16 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 
 	public void setMotionVectorYWithLengthAsSpeedInKm(double motionVectorYWithLengthAsSpeedInKm) {
 		MotionVectorYWithLengthAsSpeedInKm = motionVectorYWithLengthAsSpeedInKm;
+	}
+
+	@Override
+	public void setParkingFoundOnLeft(boolean val) {
+		_parkingFoundOnLeft = val;
+	}
+
+	@Override
+	public void setParkingFoundOnRight(boolean val) {
+		_parkingFoundOnRight = val;
 	}
 	
 	public void setWheelTorqueInNewton(double newTorque) {
@@ -287,16 +271,36 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	public double getInnerFrictionalCoefficientInNewton() {
 		return InnerFrictionalCoefficientInNewton;
 	}
-	
-	
+
+	@Override
+	public int getIndexState() {
+		return _indexState;
+	}
+
+    @Override
+    public boolean getPPActivated() {
+        return _ppActivated;
+    }
+
+    /*PP*/
+	private Integration _integration;
+	private boolean _parkingFoundOnLeft;
+	private boolean _parkingFoundOnRight;
+	private int _indexState;
+	private boolean _ppActivated;
+
 	/*DriverInput*/
+	private DriverInput _driverInput;
+	private DriverInputHandler _driverInputHandler;
+	private InputVisualizer _inputVisualizer;
+	
 	private double SteeringWheelAngle;
 	private double SteeringWheelMaxAngle;
 	private double BreakPedalPercent;
 	private double GasPedalPercent;
-	private int CurrentGear;
-	private int MaxGear;
-	private int ShiftLeverPosition;
+	//private int CurrentGear;
+	//private int MaxGear;
+	private ShiftLeverPosition ShiftLeverPosition;
 	private boolean EngineToggleButtonState;
 	
 	/*Gearbox*/
@@ -305,13 +309,9 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	private int GearMode;
 	
 	/*Engine*/
-	private double EngineTorque;
-	private int EngineRevolution;
-	private double WaterTemperature;
-	private double OilTemperature;
-	private double OilPressure;
-	private int ServiceCode;
-	
+	private Engine _engine;
+	private int _engineRevolution;
+
 	/*Wheels*/
 	private double CenterOfXAxis;
 	private double CenterOfYAxis;
@@ -341,7 +341,11 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	
 	private Container(){
 		//do not instantiate; do not subclass;
+		_engine = new Engine(this,new EngineBlock(this,this),EngineBlock.BUS_SAMPLING_TIME_MS);
+        _integration = new Integration(this,Integration.BUS_SAMPLING_TIME_MS,new PP());
+        
+        _driverInput = new DriverInput(this, this);
+        _inputVisualizer = new InputVisualizer(this);
+        _driverInputHandler = new DriverInputHandler(_driverInput, _inputVisualizer);
 	}
-
-
 }
