@@ -26,21 +26,6 @@ public interface Public_In {
 	public double getCenterOfYAxis();
 	public double getMotionVectorXWithLengthAsSpeedInKm();
 	public double getMotionVectorYWithLengthAsSpeedInKm();
-
-	public double getWheelTorqueInNewton();
-	public double getMaximumTorqueInNewton();
-	public double getMaximumBrakeTorqueInNewton();
-	public double getFrictionalCoefficientOfBrakes();
-	public double getDiameterOfDriveAxesInMeters();
-	public double getLengthOfAxesInMeters();
-	public double getDistanceBetweenAxesInMeters();
-	public double getDiameterOfWheelsInMeters();
-	public double getWidthOfWheelsInMeters();
-	public double getDriveWheelStateZeroBasedDegree();
-	public double getMaximumDriveWheelStateZeroBasedDegree();
-	public double getMaximumWheelsTurnDegree();
-	public double getTotalMassInKg();
-	public double getInnerFrictionalCoefficientInNewton();
 };
    
                    

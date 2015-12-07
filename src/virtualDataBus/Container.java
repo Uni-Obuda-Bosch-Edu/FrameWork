@@ -1,5 +1,6 @@
 package virtualDataBus;
 
+import Wheels.Implementation.Wheels;
 import busInterface.*;
 
 public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Wheels_Out, Public_In{
@@ -145,147 +146,44 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		ServiceCode = serviceCode;
 	}
 
+	@Override
 	public double getCenterOfXAxis() {
 		return CenterOfXAxis;
 	}
 
-	public void setCenterOfXAxis(double centerOfXAxis) {
-		CenterOfXAxis = centerOfXAxis;
-	}
-
+	@Override
 	public double getCenterOfYAxis() {
 		return CenterOfYAxis;
 	}
 
-	public void setCenterOfYAxis(double centerOfYAxis) {
-		CenterOfYAxis = centerOfYAxis;
-	}
-
+	@Override
 	public double getMotionVectorXWithLengthAsSpeedInKm() {
 		return MotionVectorXWithLengthAsSpeedInKm;
 	}
 
-	public void setMotionVectorXWithLengthAsSpeedInKm(double motionVectorXWithLengthAsSpeedInKm) {
-		MotionVectorXWithLengthAsSpeedInKm = motionVectorXWithLengthAsSpeedInKm;
-	}
-
+	@Override
 	public double getMotionVectorYWithLengthAsSpeedInKm() {
 		return MotionVectorYWithLengthAsSpeedInKm;
 	}
 
-	public void setMotionVectorYWithLengthAsSpeedInKm(double motionVectorYWithLengthAsSpeedInKm) {
-		MotionVectorYWithLengthAsSpeedInKm = motionVectorYWithLengthAsSpeedInKm;
-	}
-	
-	public void setWheelTorqueInNewton(double newTorque) {
-		WheelTorqueInNewton = newTorque;
-	}
-	
-	public void setMaximumWheelTorqueInNewton(double newTorque) {
-		MaximumTorqueInNewton = newTorque;
-	}
-	
-	public void setMaximumBrakeTorqueInNewton(double newTorque) {
-		MaximumBrakeTorqueInNewton = newTorque;
-	}
-	
-	public void setFrictionalCoefficientOfBrakes(double coefficient) {
-		FrictionalCoefficientOfBrakes = coefficient;
-	}
-	
-	public void setDiameterOfDriveAxesInMeters(double diameter) {
-		DiameterOfDriveAxesInMeters = diameter;
-	}
-	
-	public void setLengthOfAxesInMeters(double length) {
-		LengthOfAxesInMeters = length;
-	}
-	
-	public void setDistanceBetweenAxesInMeters(double distance) {
-		DistanceBetweenAxesInMeters = distance;
-	}
-	
-	public void setDiameterOfWheelsInMeters(double diameter) {
-		DiameterOfWheelsInMeters = diameter;
-	}
-	
-	public void setWidthOfWheelsInMeters(double width) {
-		WidthOfWheelsInMeters = width;
-	}
-	
-	public void setDriveWheelStateZeroBasedDegree(double degree) {
-		DriveWheelStateZeroBasedDegree = degree;
-	}
-	
-	public void setMaximumDriveWheelStateZeroBasedDegree(double degree) {
-		MaximumDriveWheelStateZeroBasedDegree = degree;		
+	@Override
+	public void setCenterOfXAxis(double XPos) {
+		CenterOfXAxis = XPos;
 	}
 
-	public void setMaximumWheelsTurnDegree(double degree) {
-		MaximumWheelsTurnDegree = degree;		
+	@Override
+	public void setCenterOfYAxis(double YPos) {
+		CenterOfYAxis = YPos;
 	}
 
-	public void setTotalMassInKg(double newMass) {
-		TotalMassInKg = newMass;
+	@Override
+	public void setMotionVectorXWithLengthAsSpeedInKm(double XSpeedVector) {
+		MotionVectorXWithLengthAsSpeedInKm = XSpeedVector;
 	}
 
-	public void setInnerFrictionalCoefficientInNewton(double coefficient) {
-		InnerFrictionalCoefficientInNewton = coefficient;
-	}
-	
-	public double getWheelTorqueInNewton() {
-		return WheelTorqueInNewton;
-	}
-	
-	public double getMaximumTorqueInNewton() {
-		return MaximumTorqueInNewton;
-	}
-	
-	public double getMaximumBrakeTorqueInNewton() {
-		return MaximumBrakeTorqueInNewton;
-	}
-	
-	public double getFrictionalCoefficientOfBrakes() {
-		return FrictionalCoefficientOfBrakes;
-	}
-
-	public double getDiameterOfDriveAxesInMeters() {
-		return DiameterOfDriveAxesInMeters;
-	}
-
-	public double getLengthOfAxesInMeters() {
-		return LengthOfAxesInMeters;
-	}
-
-	public double getDistanceBetweenAxesInMeters() {
-		return DistanceBetweenAxesInMeters;
-	}
-	public double getDiameterOfWheelsInMeters() {
-		return DiameterOfWheelsInMeters;
-	}
-
-	public double getWidthOfWheelsInMeters() {
-		return WidthOfWheelsInMeters;
-	}
-
-	public double getDriveWheelStateZeroBasedDegree() {
-		return DriveWheelStateZeroBasedDegree;
-	}
-	
-	public double getMaximumDriveWheelStateZeroBasedDegree() {
-		return MaximumDriveWheelStateZeroBasedDegree;
-	}
-	
-	public double getMaximumWheelsTurnDegree() {
-		return MaximumWheelsTurnDegree;
-	}
-	
-	public double getTotalMassInKg() {
-		return TotalMassInKg;
-	}
-
-	public double getInnerFrictionalCoefficientInNewton() {
-		return InnerFrictionalCoefficientInNewton;
+	@Override
+	public void setMotionVectorYWithLengthAsSpeedInKm(double YSpeedVector) {
+		MotionVectorYWithLengthAsSpeedInKm = YSpeedVector;
 	}
 	
 	
@@ -315,25 +213,10 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	/*Wheels*/
 	private double CenterOfXAxis;
 	private double CenterOfYAxis;
-	
 	private double MotionVectorXWithLengthAsSpeedInKm;
 	private double MotionVectorYWithLengthAsSpeedInKm;
-
-	private double WheelTorqueInNewton;                
-	private double MaximumTorqueInNewton;                
-	private double MaximumBrakeTorqueInNewton;           
-	private double FrictionalCoefficientOfBrakes;        
-	private double DiameterOfDriveAxesInMeters;          
-	private double LengthOfAxesInMeters;                 
-	private double DistanceBetweenAxesInMeters;          
-	private double DiameterOfWheelsInMeters;             
-	private double WidthOfWheelsInMeters;                
-	private double DriveWheelStateZeroBasedDegree;       
-	private double MaximumDriveWheelStateZeroBasedDegree;
-	private double MaximumWheelsTurnDegree;              
-	private double TotalMassInKg;                        
-	private double InnerFrictionalCoefficientInNewton;   
 	
+	private Wheels Wheels;
 	
 	
 	private static Container instance = null;
@@ -341,7 +224,10 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	
 	private Container(){
 		//do not instantiate; do not subclass;
+		Wheels = new Wheels(10, this, this);
 	}
+
+	
 
 
 }
