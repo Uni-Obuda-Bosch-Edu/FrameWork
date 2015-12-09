@@ -1,15 +1,11 @@
 package virtualDataBus;
 
-import PP.*;
-import busInterface.*;
 <<<<<<< HEAD
-import engine.*;
-
-public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Wheels_Out, Public_In, IPP_Out
-{
-
-	public enum ShiftLeverPosition {Parking, Reverse, Neutral, Break}
+import PP.*;
 =======
+import Wheels.Implementation.Wheels;
+>>>>>>> 9ef183f1de7fcb143eb36c279704edb0dbcea261
+import busInterface.*;
 import driverinput.DriverInput;
 import engine.*;
 import inputHandler.DriverInputHandler;
@@ -19,7 +15,6 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 {
 
 	public enum ShiftLeverPosition {Parking, Reverse, Neutral, Drive}
->>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
 	
 	public static Container getInstance(){
 		if(instance == null)
@@ -32,28 +27,27 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	}
 
 	public void setEngineToggleButtonState(boolean buttonState) {
-<<<<<<< HEAD
-		EngineToggleButtonState = buttonState;
-=======
->>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
 		if(buttonState)
 			_engine.Connect();
 		else
 			_engine.Disconnect();
-<<<<<<< HEAD
-=======
 		EngineToggleButtonState = buttonState;
->>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
 	}
 
 	public double getSteeringWheelSignedPercentage() {
 		return SteeringWheelAngle;
 	}
-
 	public void setWheelRotationPercent(double steeringWheelAngle) {
 		SteeringWheelAngle = steeringWheelAngle;
 	}
 	
+	public double getSteeringWheelMaxAngle() {
+		return SteeringWheelMaxAngle;
+	}
+
+	public void setSteeringWheelMaxAngle(double steeringWheelMaxAngle) {
+		SteeringWheelMaxAngle = steeringWheelMaxAngle;
+	}
 	public double getBrakePedalPercentage() {
 		return BreakPedalPercent;
 	}
@@ -68,6 +62,22 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 
 	public void setGasPedalPushPercent(double gasPedalAngle) {
 		GasPedalPercent = gasPedalAngle;
+	}
+
+	public int getCurrentGear() {
+		return CurrentGear;
+	}
+
+	public void setCurrentGear(int currentGear) {
+		CurrentGear = currentGear;
+	}
+
+	public int getMaxGear() {
+		return MaxGear;
+	}
+
+	public void setMaxGear(int maxGear) {
+		MaxGear = maxGear;
 	}
 
 	public ShiftLeverPosition getShiftLeverPosition() {
@@ -98,7 +108,18 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return GearMode;
 	}
 
-	@Override
+	public void setGearMode(int gearMode) {
+		GearMode = gearMode;
+	}
+
+	public double getEngineTorque() {
+		return EngineTorque;
+	}
+
+	public void setEngineTorque(double engineTorque) {
+		EngineTorque = engineTorque;
+	}
+
 	public int getEngineRevolution() {
 		return _engineRevolution;
 	}
@@ -112,34 +133,27 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		GearMode = gearMode;
 	}
 
+	@Override
 	public double getCenterOfXAxis() {
 		return CenterOfXAxis;
 	}
 
-	public void setCenterOfXAxis(double centerOfXAxis) {
-		CenterOfXAxis = centerOfXAxis;
-	}
-
+	@Override
 	public double getCenterOfYAxis() {
 		return CenterOfYAxis;
 	}
 
-	public void setCenterOfYAxis(double centerOfYAxis) {
-		CenterOfYAxis = centerOfYAxis;
-	}
-
+	@Override
 	public double getMotionVectorXWithLengthAsSpeedInKm() {
 		return MotionVectorXWithLengthAsSpeedInKm;
 	}
 
-	public void setMotionVectorXWithLengthAsSpeedInKm(double motionVectorXWithLengthAsSpeedInKm) {
-		MotionVectorXWithLengthAsSpeedInKm = motionVectorXWithLengthAsSpeedInKm;
-	}
-
+	@Override
 	public double getMotionVectorYWithLengthAsSpeedInKm() {
 		return MotionVectorYWithLengthAsSpeedInKm;
 	}
 
+<<<<<<< HEAD
 	public void setMotionVectorYWithLengthAsSpeedInKm(double motionVectorYWithLengthAsSpeedInKm) {
 		MotionVectorYWithLengthAsSpeedInKm = motionVectorYWithLengthAsSpeedInKm;
 	}
@@ -196,73 +210,26 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	
 	public void setMaximumDriveWheelStateZeroBasedDegree(double degree) {
 		MaximumDriveWheelStateZeroBasedDegree = degree;		
+=======
+	@Override
+	public void setCenterOfXAxis(double XPos) {
+		CenterOfXAxis = XPos;
+>>>>>>> 9ef183f1de7fcb143eb36c279704edb0dbcea261
 	}
 
-	public void setMaximumWheelsTurnDegree(double degree) {
-		MaximumWheelsTurnDegree = degree;		
+	@Override
+	public void setCenterOfYAxis(double YPos) {
+		CenterOfYAxis = YPos;
 	}
 
-	public void setTotalMassInKg(double newMass) {
-		TotalMassInKg = newMass;
+	@Override
+	public void setMotionVectorXWithLengthAsSpeedInKm(double XSpeedVector) {
+		MotionVectorXWithLengthAsSpeedInKm = XSpeedVector;
 	}
 
-	public void setInnerFrictionalCoefficientInNewton(double coefficient) {
-		InnerFrictionalCoefficientInNewton = coefficient;
-	}
-	
-	public double getWheelTorqueInNewton() {
-		return WheelTorqueInNewton;
-	}
-	
-	public double getMaximumTorqueInNewton() {
-		return MaximumTorqueInNewton;
-	}
-	
-	public double getMaximumBrakeTorqueInNewton() {
-		return MaximumBrakeTorqueInNewton;
-	}
-	
-	public double getFrictionalCoefficientOfBrakes() {
-		return FrictionalCoefficientOfBrakes;
-	}
-
-	public double getDiameterOfDriveAxesInMeters() {
-		return DiameterOfDriveAxesInMeters;
-	}
-
-	public double getLengthOfAxesInMeters() {
-		return LengthOfAxesInMeters;
-	}
-
-	public double getDistanceBetweenAxesInMeters() {
-		return DistanceBetweenAxesInMeters;
-	}
-	public double getDiameterOfWheelsInMeters() {
-		return DiameterOfWheelsInMeters;
-	}
-
-	public double getWidthOfWheelsInMeters() {
-		return WidthOfWheelsInMeters;
-	}
-
-	public double getDriveWheelStateZeroBasedDegree() {
-		return DriveWheelStateZeroBasedDegree;
-	}
-	
-	public double getMaximumDriveWheelStateZeroBasedDegree() {
-		return MaximumDriveWheelStateZeroBasedDegree;
-	}
-	
-	public double getMaximumWheelsTurnDegree() {
-		return MaximumWheelsTurnDegree;
-	}
-	
-	public double getTotalMassInKg() {
-		return TotalMassInKg;
-	}
-
-	public double getInnerFrictionalCoefficientInNewton() {
-		return InnerFrictionalCoefficientInNewton;
+	@Override
+	public void setMotionVectorYWithLengthAsSpeedInKm(double YSpeedVector) {
+		MotionVectorYWithLengthAsSpeedInKm = YSpeedVector;
 	}
 
 	@Override
@@ -288,8 +255,11 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	private InputVisualizer _inputVisualizer;
 	
 	private double SteeringWheelAngle;
+	private double SteeringWheelMaxAngle;
 	private double BreakPedalPercent;
 	private double GasPedalPercent;
+	private int CurrentGear;
+	private int MaxGear;
 	private ShiftLeverPosition ShiftLeverPosition;
 	private boolean EngineToggleButtonState;
 	
@@ -305,25 +275,10 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	/*Wheels*/
 	private double CenterOfXAxis;
 	private double CenterOfYAxis;
-	
 	private double MotionVectorXWithLengthAsSpeedInKm;
 	private double MotionVectorYWithLengthAsSpeedInKm;
-
-	private double WheelTorqueInNewton;                
-	private double MaximumTorqueInNewton;                
-	private double MaximumBrakeTorqueInNewton;           
-	private double FrictionalCoefficientOfBrakes;        
-	private double DiameterOfDriveAxesInMeters;          
-	private double LengthOfAxesInMeters;                 
-	private double DistanceBetweenAxesInMeters;          
-	private double DiameterOfWheelsInMeters;             
-	private double WidthOfWheelsInMeters;                
-	private double DriveWheelStateZeroBasedDegree;       
-	private double MaximumDriveWheelStateZeroBasedDegree;
-	private double MaximumWheelsTurnDegree;              
-	private double TotalMassInKg;                        
-	private double InnerFrictionalCoefficientInNewton;   
 	
+	private Wheels Wheels;
 	
 	
 	private static Container instance = null;
@@ -331,14 +286,19 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	
 	private Container(){
 		//do not instantiate; do not subclass;
+<<<<<<< HEAD
 		_engine = new Engine(this,new EngineBlock(this,this),EngineBlock.BUS_SAMPLING_TIME_MS);
         _integration = new Integration(this,Integration.BUS_SAMPLING_TIME_MS,new PP());
-<<<<<<< HEAD
-=======
         
         _driverInput = new DriverInput(this, this);
         _inputVisualizer = new InputVisualizer(this);
         _driverInputHandler = new DriverInputHandler(_driverInput, _inputVisualizer);
->>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
+=======
+		Wheels = new Wheels(10, this, this);
+>>>>>>> 9ef183f1de7fcb143eb36c279704edb0dbcea261
 	}
+
+	
+
+
 }

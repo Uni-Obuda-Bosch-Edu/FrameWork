@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Framework</name>
-<<<<<<< HEAD
 	<comment/>
 	<projects/>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
 			<arguments/>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>
 =======
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>FrameWork</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,10 +26,10 @@
 			<name>org.eclipse.jdt.core.javabuilder</name>
 			<arguments>
 			</arguments>
->>>>>>> b0f0b07cff5fc6891ca0dda2f18c1e207a9170d4
 		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
+>>>>>>> 9ef183f1de7fcb143eb36c279704edb0dbcea261

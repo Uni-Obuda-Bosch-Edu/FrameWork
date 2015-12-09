@@ -9,20 +9,26 @@ public interface Public_In {
 	public double getGasPedalPercentage();
 	public boolean getEngineToggleButtonState();
 	
-	//public int getCurrentGear();
-	//public int getMaxGear();
+	public int getCurrentGear();
+	public int getMaxGear();
 	public ShiftLeverPosition getShiftLeverPosition();
 	
 	public double getGearTorque();    
 	public int getGearRevolution();  
 	public int getGearMode();   
 	
+	public double getEngineTorque();
 	public int getEngineRevolution();
+	public double getWaterTemperature();
+	public double getOilTemperature();
+	public double getOilPressure(); 
+	public int getServiceCode(); 
 	
 	public double getCenterOfXAxis();
 	public double getCenterOfYAxis();
 	public double getMotionVectorXWithLengthAsSpeedInKm();
 	public double getMotionVectorYWithLengthAsSpeedInKm();
+<<<<<<< HEAD
 
 	public double getWheelTorqueInNewton();
 	public double getMaximumTorqueInNewton();
@@ -39,12 +45,11 @@ public interface Public_In {
 	public double getTotalMassInKg();
 	public double getInnerFrictionalCoefficientInNewton();
 
-<<<<<<< HEAD
 	//TODO: implement in Driver input
 	public int getIndexState();
-=======
->>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
 	public boolean getPPActivated();
+=======
+>>>>>>> 9ef183f1de7fcb143eb36c279704edb0dbcea261
 };
    
                    

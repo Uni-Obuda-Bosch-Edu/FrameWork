@@ -1,5 +1,6 @@
 package virtualDataBus;
 
+import Wheels.Implementation.Wheels;
 import PP.*;
 import busInterface.*;
 import driverinput.DriverInput;
@@ -161,12 +162,11 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		MotionVectorYWithLengthAsSpeedInKm = motionVectorYWithLengthAsSpeedInKm;
 	}
 
-	@Override
 	public void setParkingFoundOnLeft(boolean val) {
 		_parkingFoundOnLeft = val;
 	}
 
-	@Override
+
 	public void setParkingFoundOnRight(boolean val) {
 		_parkingFoundOnRight = val;
 	}
@@ -247,12 +247,167 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		return DiameterOfDriveAxesInMeters;
 	}
 
+
+	@Override
+	public double getCenterOfXAxis() {
+		return CenterOfXAxis;
+	}
+
+	@Override
+	public void setCenterOfXAxis(double centerOfXAxis) {
+		CenterOfXAxis = centerOfXAxis;
+	}
+	
+	@Override
+	public double getCenterOfYAxis() {
+		return CenterOfYAxis;
+	}
+	
+	@Override
+	public void setCenterOfYAxis(double centerOfYAxis) {
+		CenterOfYAxis = centerOfYAxis;
+	}
+
 	public double getLengthOfAxesInMeters() {
 		return LengthOfAxesInMeters;
+	}
+	
+	@Override
+	public double getMotionVectorXWithLengthAsSpeedInKm() {
+		return MotionVectorXWithLengthAsSpeedInKm;
+	}
+
+	public void setMotionVectorXWithLengthAsSpeedInKm(double motionVectorXWithLengthAsSpeedInKm) {
+		MotionVectorXWithLengthAsSpeedInKm = motionVectorXWithLengthAsSpeedInKm;
 	}
 
 	public double getDistanceBetweenAxesInMeters() {
 		return DistanceBetweenAxesInMeters;
+	}
+	
+	public double getDiameterOfWheelsInMeters() {
+		return DiameterOfWheelsInMeters;
+	}
+	
+	@Override
+	public double getMotionVectorYWithLengthAsSpeedInKm() {
+		return MotionVectorYWithLengthAsSpeedInKm;
+	}
+	
+	@Override
+	public void setMotionVectorYWithLengthAsSpeedInKm(double motionVectorYWithLengthAsSpeedInKm) {
+		MotionVectorYWithLengthAsSpeedInKm = motionVectorYWithLengthAsSpeedInKm;
+	}
+	
+	public void setWheelTorqueInNewton(double newTorque) {
+		WheelTorqueInNewton = newTorque;
+	}
+	
+	public void setMaximumWheelTorqueInNewton(double newTorque) {
+		MaximumTorqueInNewton = newTorque;
+	}
+	
+	public void setMaximumBrakeTorqueInNewton(double newTorque) {
+		MaximumBrakeTorqueInNewton = newTorque;
+	}
+	
+	public void setFrictionalCoefficientOfBrakes(double coefficient) {
+		FrictionalCoefficientOfBrakes = coefficient;
+	}
+	
+	@Override
+	public void setCenterOfXAxis(double XPos) {
+		CenterOfXAxis = XPos;
+	}
+	
+	@Override
+	public double getDriveWheelStateZeroBasedDegree() {
+		return DriveWheelStateZeroBasedDegree;
+	}
+	
+	public double getMaximumDriveWheelStateZeroBasedDegree() {
+		return MaximumDriveWheelStateZeroBasedDegree;
+	}
+	
+	public double getMaximumWheelsTurnDegree() {
+		return MaximumWheelsTurnDegree;
+	}
+	
+	@Override
+	public int getIndexState() {
+		return _indexState;
+	}
+	
+	public void setCenterOfYAxis(double YPos) {
+		CenterOfYAxis = YPos;
+	}
+	
+	public double getInnerFrictionalCoefficientInNewton() {
+		return InnerFrictionalCoefficientInNewton;
+	}
+
+	public void setDistanceBetweenAxesInMeters(double distance) {
+		DistanceBetweenAxesInMeters = distance;
+	}
+	
+	public void setMotionVectorXWithLengthAsSpeedInKm(double XSpeedVector) {
+		MotionVectorXWithLengthAsSpeedInKm = XSpeedVector;
+	}
+	
+	public void setDiameterOfWheelsInMeters(double diameter) {
+		DiameterOfWheelsInMeters = diameter;
+	}
+	
+	public void setWidthOfWheelsInMeters(double width) {
+		WidthOfWheelsInMeters = width;
+	}
+	
+	public void setDriveWheelStateZeroBasedDegree(double degree) {
+		DriveWheelStateZeroBasedDegree = degree;
+	}
+	
+	public void setMaximumDriveWheelStateZeroBasedDegree(double degree) {
+		MaximumDriveWheelStateZeroBasedDegree = degree;		
+	}
+
+	public void setMaximumWheelsTurnDegree(double degree) {
+		MaximumWheelsTurnDegree = degree;		
+	}
+
+	public void setTotalMassInKg(double newMass) {
+		TotalMassInKg = newMass;
+	}
+
+	public void setInnerFrictionalCoefficientInNewton(double coefficient) {
+		InnerFrictionalCoefficientInNewton = coefficient;
+	}
+	
+	public double getWheelTorqueInNewton() {
+		return WheelTorqueInNewton;
+	}
+	
+	public double getMaximumTorqueInNewton() {
+		return MaximumTorqueInNewton;
+	}
+	
+	public double getMaximumBrakeTorqueInNewton() {
+		return MaximumBrakeTorqueInNewton;
+	}
+	
+	public double getFrictionalCoefficientOfBrakes() {
+		return FrictionalCoefficientOfBrakes;
+	}
+
+	public double getDiameterOfDriveAxesInMeters() {
+		return DiameterOfDriveAxesInMeters;
+	}
+
+	public double getLengthOfAxesInMeters() {
+		return LengthOfAxesInMeters;
+	}
+
+	public void setMotionVectorYWithLengthAsSpeedInKm(double YSpeedVector) {
+		MotionVectorYWithLengthAsSpeedInKm = YSpeedVector;
 	}
 	public double getDiameterOfWheelsInMeters() {
 		return DiameterOfWheelsInMeters;
@@ -280,18 +435,11 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 
 	public double getInnerFrictionalCoefficientInNewton() {
 		return InnerFrictionalCoefficientInNewton;
-	}
-
-	@Override
-	public int getIndexState() {
-		return _indexState;
-	}
-
-    @Override
-    public boolean getPPActivated() {
-        return _ppActivated;
     }
 
+	public boolean getPPActivated() {
+        return _ppActivated;
+	}
     /*PP*/
 	private Integration _integration;
 	private boolean _parkingFoundOnLeft;
@@ -351,6 +499,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	
 	private Container(){
 		//do not instantiate; do not subclass;
+		Wheels = new Wheels(10, this, this);
 		_engine = new Engine(this,new EngineBlock(this,this),EngineBlock.BUS_SAMPLING_TIME_MS);
         _integration = new Integration(this,Integration.BUS_SAMPLING_TIME_MS,new PP());
         
