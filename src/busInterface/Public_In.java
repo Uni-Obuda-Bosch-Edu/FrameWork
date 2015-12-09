@@ -15,12 +15,7 @@ public interface Public_In {
 	public int getGearRevolution();  
 	public int getGearMode();   
 	
-	public double getEngineTorque();
 	public int getEngineRevolution();
-	public double getWaterTemperature();
-	public double getOilTemperature();
-	public double getOilPressure(); 
-	public int getServiceCode(); 
 	
 	public double getCenterOfXAxis();
 	public double getCenterOfYAxis();
@@ -41,6 +36,10 @@ public interface Public_In {
 	public double getMaximumWheelsTurnDegree();
 	public double getTotalMassInKg();
 	public double getInnerFrictionalCoefficientInNewton();
+
+	//TODO: implement in Driver input
+	public int getIndexState();
+	public boolean getPPActivated();
 };
    
                    
