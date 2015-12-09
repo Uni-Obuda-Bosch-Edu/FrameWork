@@ -2,6 +2,14 @@ package virtualDataBus;
 
 import PP.*;
 import busInterface.*;
+<<<<<<< HEAD
+import engine.*;
+
+public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Wheels_Out, Public_In, IPP_Out
+{
+
+	public enum ShiftLeverPosition {Parking, Reverse, Neutral, Break}
+=======
 import driverinput.DriverInput;
 import engine.*;
 import inputHandler.DriverInputHandler;
@@ -11,6 +19,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 {
 
 	public enum ShiftLeverPosition {Parking, Reverse, Neutral, Drive}
+>>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
 	
 	public static Container getInstance(){
 		if(instance == null)
@@ -23,11 +32,18 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	}
 
 	public void setEngineToggleButtonState(boolean buttonState) {
+<<<<<<< HEAD
+		EngineToggleButtonState = buttonState;
+=======
+>>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
 		if(buttonState)
 			_engine.Connect();
 		else
 			_engine.Disconnect();
+<<<<<<< HEAD
+=======
 		EngineToggleButtonState = buttonState;
+>>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
 	}
 
 	public double getSteeringWheelSignedPercentage() {
@@ -38,13 +54,6 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		SteeringWheelAngle = steeringWheelAngle;
 	}
 	
-	public double getSteeringWheelMaxAngle() {
-		return SteeringWheelMaxAngle;
-	}
-
-	public void setSteeringWheelMaxAngle(double steeringWheelMaxAngle) {
-		SteeringWheelMaxAngle = steeringWheelMaxAngle;
-	}
 	public double getBrakePedalPercentage() {
 		return BreakPedalPercent;
 	}
@@ -59,22 +68,6 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 
 	public void setGasPedalPushPercent(double gasPedalAngle) {
 		GasPedalPercent = gasPedalAngle;
-	}
-
-	public int getCurrentGear() {
-		return CurrentGear;
-	}
-
-	public void setCurrentGear(int currentGear) {
-		CurrentGear = currentGear;
-	}
-
-	public int getMaxGear() {
-		return MaxGear;
-	}
-
-	public void setMaxGear(int maxGear) {
-		MaxGear = maxGear;
 	}
 
 	public ShiftLeverPosition getShiftLeverPosition() {
@@ -290,12 +283,13 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	private boolean _ppActivated;
 
 	/*DriverInput*/
+	private DriverInput _driverInput;
+	private DriverInputHandler _driverInputHandler;
+	private InputVisualizer _inputVisualizer;
+	
 	private double SteeringWheelAngle;
-	private double SteeringWheelMaxAngle;
 	private double BreakPedalPercent;
 	private double GasPedalPercent;
-	private int CurrentGear;
-	private int MaxGear;
 	private ShiftLeverPosition ShiftLeverPosition;
 	private boolean EngineToggleButtonState;
 	
@@ -339,11 +333,12 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		//do not instantiate; do not subclass;
 		_engine = new Engine(this,new EngineBlock(this,this),EngineBlock.BUS_SAMPLING_TIME_MS);
         _integration = new Integration(this,Integration.BUS_SAMPLING_TIME_MS,new PP());
+<<<<<<< HEAD
+=======
         
         _driverInput = new DriverInput(this, this);
         _inputVisualizer = new InputVisualizer(this);
         _driverInputHandler = new DriverInputHandler(_driverInput, _inputVisualizer);
+>>>>>>> a48f0015eaa08dc424772ae00adf724867e2c6c8
 	}
-
-
 }
