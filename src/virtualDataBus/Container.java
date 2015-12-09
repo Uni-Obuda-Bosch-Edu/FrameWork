@@ -76,11 +76,11 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 		MaxGear = maxGear;
 	}
 
-	public int getShiftLeverPosition() {
+	public ShiftLeverPosition getShiftLeverPosition() {
 		return ShiftLeverPosition;
 	}
 
-	public void setShiftLeverPosition(int shiftLeverPosition) {
+	public void setShiftLeverPosition(ShiftLeverPosition shiftLeverPosition) {
 		ShiftLeverPosition = shiftLeverPosition;
 	}
 
@@ -310,7 +310,7 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
 	private double GasPedalPercent;
 	private int CurrentGear;
 	private int MaxGear;
-	private int ShiftLeverPosition;
+	private ShiftLeverPosition ShiftLeverPosition;
 	private boolean EngineToggleButtonState;
 	
 	/*Gearbox*/
@@ -358,4 +358,6 @@ public class Container implements Engine_Out, DriverInput_Out, Gearbox_Out, Whee
         _inputVisualizer = new InputVisualizer(this);
         _driverInputHandler = new DriverInputHandler(_driverInput, _inputVisualizer);
 	}
+
+
 }

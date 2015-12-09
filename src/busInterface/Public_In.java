@@ -11,7 +11,7 @@ public interface Public_In {
 	
 	public int getCurrentGear();
 	public int getMaxGear();
-	public int getShiftLeverPosition();
+	public ShiftLeverPosition getShiftLeverPosition();
 	
 	public double getGearTorque();    
 	public int getGearRevolution();  
